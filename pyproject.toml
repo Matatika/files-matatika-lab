@@ -10,6 +10,10 @@ packages = [{include = "bundle"}]
 python = "^3.7"
 
 
+[tool.poetry.group.dev.dependencies]
+yamllint = "^1.28.0"
+pre-commit = "^2.20.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

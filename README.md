@@ -50,3 +50,23 @@ docker compose down
 # also remove named volumes
 docker compose down --volumes
 ```
+
+## Developer resources
+
+### Init your development environment
+```bash
+pipx install poetry
+make init
+```
+
+### Lint bundle files
+Identify lint issues by running:
+
+```bash
+make lint
+```
+
+> If `make init` has been run, this command will execute automatically before a commit
+
+Supported file types:
+  - YAML
