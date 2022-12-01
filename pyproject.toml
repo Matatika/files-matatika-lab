@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Meltano file bundle to run the Matatika Lab using Docker."
 authors = ["Reuben Frankel <rfrankel@matatika.com>"]
 readme = "README.md"
-packages = [{include = "files_matatika_lab"}]
+packages = [{include = "bundle"}]
 
 [tool.poetry.dependencies]
 python = "^3.7"
