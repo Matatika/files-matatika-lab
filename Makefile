@@ -1,4 +1,4 @@
-.PHONY: help init lint
+.PHONY: help init lint update
 
 help:
 	@echo AVAILABLE COMMANDS
@@ -11,3 +11,7 @@ init: ## Initialise repo for local development
 
 lint: ## Lint bundle files
 	@poetry run yamllint -d relaxed bundle
+
+update: ## Update catalog and app images in docker-compose.yml to specified version
+	@test -n '$(VERSION)' || (echo "'VERSION' not set"; exit 1)
+	@sed -Ei -e 's/(image: matatika\/(catalog|app)).*/\1:$(VERSION)/g' bundle/docker-compose.yml
