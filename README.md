@@ -13,7 +13,7 @@ plugins:
     - name: files-matatika-lab
       namespace: matatika
       variant: matatika
-      pip_url: /home/reuben/Documents/file_bundles/files-matatika-lab
+      pip_url: git+https://github.com/Matatika/files-matatika-lab.git
       update:
         '*': true
 ```
